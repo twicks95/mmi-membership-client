@@ -1,0 +1,12 @@
+.container {
+  height: 2rem;
+}
+
+.background {
+  background-color: #0a24ad;
+}
+
+.text {
+  color: #f9f9f9;
+  font-size: 11px;
+}

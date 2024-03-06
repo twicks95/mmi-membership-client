@@ -1,0 +1,22 @@
+.avatar {
+  display: block;
+  height: 76px;
+  width: 76px;
+  background-image: url(../../../../../public/assets/images/avatar-header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardMasking {
+  margin-left: -22px;
+}
+
+.memberPoints {
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(
+    -25deg,
+    rgba(0, 74, 142, 1) 0%,
+    rgba(0, 137, 255, 0.93) 40%,
+    rgba(0, 109, 210, 1) 100%
+  );
+}

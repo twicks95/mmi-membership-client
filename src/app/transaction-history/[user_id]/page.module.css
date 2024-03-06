@@ -1,0 +1,9 @@
+.primary {
+  background: "#0A24AD" !important;
+  height: 340px;
+  border: 1px solid black;
+}
+
+.primary:hover {
+    background-color: "red"
+}

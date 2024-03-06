@@ -17,13 +17,38 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+main {
+  position: relative;
+  min-width: 23.4375rem; /* 375px */
+  /* max-width: 23.4375rem; 375px */
+  width: 30rem; /* 480px */
+  min-height: 100vh; /* 812px */
+  padding: 1.5625rem;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+input {
+  font-family: "Fira Sans", sans-serif !important;
+  height: 2.5rem;
+  background: #F6F6F6 !important;
+  box-shadow: none !important;
+  box-shadow: 0 1px 4px 0 rgba(73, 73, 73, 0.15);
+  -webkit-box-shadow: 0 1px 4px 0 rgba(73, 73, 73, 0.15);
+  -moz-box-shadow: 0 1px 4px 0 rgba(73, 73, 73, 0.15);
 }
 
 @layer utilities {
