@@ -117,6 +117,22 @@ export default function Shop({ params }) {
             return [selectedvoucher, ...prev]
         })
 
+        fetch(`http://localhost:3001/api/buy-vouchers/${userData.user_id}`, {
+            headers: { 'Content-Type': 'application/json' }, // required
+            method: 'POST',
+            body: JSON.stringify({
+                voucher_price: selectedvoucher.voucher_price
+            }),
+        })
+
+        // fetch(`http://localhost:3001/api/buy-vouchers/${userId}`, {
+        //     headers: { 'Content-Type': 'application/json' }, // required
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //         voucher_price: selectedvoucher.voucher_price
+        //     }),
+        // })
+
         const voucherName = selectedvoucher.name
         const voucherPrice = selectedvoucher.voucher_price
         setOpen(true);
