@@ -20,10 +20,10 @@ export default function Shop({ params }) {
     const [okText, setOkText] = useState("Buy")
 
     const dummyVouchers = [
-        { voucher_code: "VDISC50FATHER", name: "Discount up to 50%", voucher_price: 1200, image: "/assets/images/vouchers/voucher1.svg", expired_at: new Date('2024-04-01T23:59:59') },
-        { voucher_code: "VDISC45BESTSALE", name: "Discount 45% OFF best sale", voucher_price: 4000, image: "/assets/images/vouchers/voucher2.svg", expired_at: new Date('2024-06-14T23:59:59') },
-        { voucher_code: "VBUY1GET1ADIDAS", name: "Buy 1 Get 1 for adidas item FREE!", voucher_price: 10000, image: "/assets/images/vouchers/voucher5.svg", expired_at: new Date('2024-06-20T23:59:59') },
-        { voucher_code: "VDISC15DOUGH", name: "Discount 15% OFF voucher", voucher_price: 650, image: "/assets/images/vouchers/voucher3.svg", expired_at: new Date('2024-07-20T23:59:59') },
+        { voucher_code: "VDISC30", name: "Discount 30% OFF", voucher_price: 3000, image: "/assets/images/vouchers/voucher30.jpg", expired_at: new Date('2024-04-01T23:59:59') },
+        { voucher_code: "VCHEESEBURGER", name: "Free Cheese Burger", voucher_price: 4000, image: "/assets/images/vouchers/CheeseBurger.jpg", expired_at: new Date('2024-06-14T23:59:59') },
+        { voucher_code: "VFREEMILKTEA", name: "Free Iced Milk Tea", voucher_price: 2500, image: "/assets/images/vouchers/MilkTea.jpg", expired_at: new Date('2024-06-20T23:59:59') },
+        { voucher_code: "VFREESASHIMI", name: "Free Salmon Sashimi", voucher_price: 5500, image: "/assets/images/vouchers/SalmonSashimi.jpg", expired_at: new Date('2024-07-20T23:59:59') },
     ]
 
     const fetchUser = async ({ userId }) => {
@@ -124,14 +124,6 @@ export default function Shop({ params }) {
                 voucher_price: selectedvoucher.voucher_price
             }),
         })
-
-        // fetch(`http://localhost:3001/api/buy-vouchers/${userId}`, {
-        //     headers: { 'Content-Type': 'application/json' }, // required
-        //     method: 'POST',
-        //     body: JSON.stringify({
-        //         voucher_price: selectedvoucher.voucher_price
-        //     }),
-        // })
 
         const voucherName = selectedvoucher.name
         const voucherPrice = selectedvoucher.voucher_price
