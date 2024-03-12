@@ -1,11 +1,13 @@
+import React from "react";
 import { Button, ConfigProvider } from "antd";
 
-export default function button({
+function AntButton({
   type = "default",
   disabled = false,
   text = "Button",
   htmlType = "button",
-  onClick,
+  value,
+  onClick = null,
   style,
   className = "",
   loading = false,
@@ -21,16 +23,21 @@ export default function button({
       }}
     >
       <Button
-        className={className.concat(" w-full h-14 text-lg font-bold")}
+        className={`${
+          disabled && "hover:bg-[#f4f4f4] hover:!text-[#c2c2c2]"
+        } ${className.concat(" flex items-center justify-center w-full h-14 text-lg font-bold")}`}
         type={type}
         disabled={disabled}
         htmlType={htmlType}
         onClick={onClick}
         style={style}
         loading={loading}
+        value={value}
       >
         {text}
       </Button>
     </ConfigProvider>
   );
 }
+
+export default React.memo(AntButton);
