@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Card from "../../../components/card/card.jsx"
+import Card from "../../../components/card/Card.jsx"
 import Image from "next/image.js"
 import moment from "moment"
 import Link from "next/link.js"

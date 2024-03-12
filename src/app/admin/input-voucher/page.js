@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
-import Button from "../../../components/button/button.jsx"
+import Button from "../../../components/button/Button.jsx"
 import InputDate from "../../../components/inputDate/inputDate.jsx"
 import Image from "next/image.js"
 import { ConfigProvider, Form, Input, Upload, message } from "antd"

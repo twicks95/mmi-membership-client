@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Alert, Form, Input, Space } from "antd";
-import Button from "../../../components/button/button.jsx";
+import Button from "../../../components/button/Button.jsx";
 import { useState } from "react";
 import Link from "next/link.js";
 
