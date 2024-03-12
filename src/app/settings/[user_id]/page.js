@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import Link from "next/link.js"
 import Header from "@/components/header/header.jsx"
-import Card from "../../../components/card/card.jsx"
+import Card from "../../../components/card/Card.jsx"
 
 export default function Settings({ params }) {
     const [userData, setUserData] = useState({})
