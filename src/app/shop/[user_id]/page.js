@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import Header from "../../../components/header/header"
-import Link from 'next/link'
 import { Button, Modal, Skeleton } from 'antd'
 import moment from 'moment'
 import Image from 'next/image'
@@ -196,7 +195,7 @@ export default function Shop({ params }) {
                                     < Skeleton.Button
                                         active
                                         shape="square"
-                                        className="!w-full !h-full !h-[14px] !rounded-tl-[10px] !rounded-tr-[10px] !rounded-bl-none !rounded-br-none"
+                                        className="!w-full !h-full !rounded-tl-[10px] !rounded-tr-[10px] !rounded-bl-none !rounded-br-none"
                                     />
                                 </div>
                                 <div className="bg-white p-2.5" style={{ borderRadius: "0 0 10px 10px" }}>
