@@ -98,7 +98,14 @@ export default function Header({
                     />
                   )}
                   {!admin ? (
-                    <Link href={`/profile/${window.localStorage.getItem("userId")}`}>
+                    <div
+                      className="cursor-pointer"
+                      onClick={() => {
+                        window.location.href = `http://localhost:3000/profile/${window.localStorage.getItem(
+                          "userId"
+                        )}`;
+                      }}
+                    >
                       <Image
                         src="/assets/images/avatar-header.svg"
                         width={21}
@@ -107,7 +114,7 @@ export default function Header({
                         priority
                         style={{ width: "auto", height: "auto" }}
                       />
-                    </Link>
+                    </div>
                   ) : (
                     <Image
                       src="/assets/images/avatar-header.svg"
