@@ -7,7 +7,6 @@ import InputPin from "../../../components/inputPin/inputPin.jsx"
 import { useEffect, useState } from "react"
 import Link from "next/link.js"
 import Header from "@/components/header/header.jsx"
-import Card from "../../../components/card/card.jsx"
 import moment from "moment"
 
 export default function MyVouchers({ params }) {
