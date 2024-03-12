@@ -166,7 +166,7 @@ export default function MyVouchers({ params }) {
                                         < Skeleton.Button
                                             active
                                             shape="square"
-                                            className="!w-full !h-full !h-[14px] !rounded-tl-[10px] !rounded-tr-[10px] !rounded-bl-none !rounded-br-none"
+                                            className="!w-full !h-full !rounded-tl-[10px] !rounded-tr-[10px] !rounded-bl-none !rounded-br-none"
                                         />
                                     </div>
                                     <div className="bg-white p-2.5" style={{ borderRadius: "0 0 10px 10px" }}>
