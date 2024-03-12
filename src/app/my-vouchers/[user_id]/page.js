@@ -1,11 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Button, Form, Input, Modal, Skeleton, Space } from "antd"
-// import Button from "../../../components/button/button.jsx"
-import InputPin from "../../../components/inputPin/inputPin.jsx"
+import { Button, Modal, Skeleton } from "antd"
 import { useEffect, useState } from "react"
-import Link from "next/link.js"
 import Header from "@/components/header/header.jsx"
 import moment from "moment"
 
