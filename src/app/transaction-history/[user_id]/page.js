@@ -4,8 +4,8 @@ import { DatePicker } from "antd"
 import { useEffect, useState } from "react"
 import Link from "next/link.js"
 import Header from "@/components/header/header.jsx"
-import Card from "@/components/card/card.jsx"
-import Button from "@/components/button/button.jsx"
+import Card from "@/components/card/Card.jsx"
+import Button from "@/components/button/Button.jsx"
 import dayjs from "dayjs"
 
 export default function TransactionHistory({ params }) {
