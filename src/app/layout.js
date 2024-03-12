@@ -1,18 +1,17 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider } from "antd"
-// import { Fira_Sans } from "next/font/google"
 import Footer from "../components/footer/footer"
-
 import { CustomProvider } from 'rsuite';
 import 'rsuite/dist/rsuite-no-reset.min.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Membership Platform",
-  description: "A membership app powered by Mitra Mandiri Informatika",
-};
+// It uses only for server side page, not client side
+// export const metadata = {
+//   title: "Membership Platform",
+//   description: "A membership app powered by Mitra Mandiri Informatika",
+// };
 
 //👇 Configure our font object
 // const firaSans = Fira_Sans({ weight: '400', subsets: ["latin"] })
