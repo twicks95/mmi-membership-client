@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
-import Card from "../../../../components/card/card.jsx"
+import Card from "../../../../components/card/Card.jsx"
 import Image from "next/image.js"
 import pageStyles from "./page.module.css"
 import Header from "../../../../components/header/header.jsx"
