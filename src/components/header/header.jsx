@@ -98,12 +98,7 @@ export default function Header({
                     />
                   )}
                   {!admin ? (
-                    <div
-                      className="cursor-pointer"
-                      onClick={() => {
-                        window.history.back();
-                      }}
-                    >
+                    <Link href={`/profile/${window.localStorage.getItem("userId")}`}>
                       <Image
                         src="/assets/images/avatar-header.svg"
                         width={21}
@@ -112,7 +107,7 @@ export default function Header({
                         priority
                         style={{ width: "auto", height: "auto" }}
                       />
-                    </div>
+                    </Link>
                   ) : (
                     <Image
                       src="/assets/images/avatar-header.svg"
