@@ -5,12 +5,16 @@ import Header from "../../../components/header/header.jsx"
 import CardTier from "../../../components/cardTier/cardTier.jsx"
 // import Carousel from "../../../components/carousel/carousel.jsx"
 import { useEffect, useState } from "react"
-import Card from "../../../components/card/card.jsx"
+import Card from "../../../components/card/Card.jsx"
 import Image from "next/image.js"
 import Link from "next/link.js"
+import { Helmet } from "react-helmet"
 
 
 export default function Dashboard({ params }) {
+    const pageTitle = 'Dashboard | Membership';
+    const pageDescription = 'A user dashboard';
+
     const [userData, setUserData] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     const baseIconPath = "/assets/svg/"
@@ -52,6 +56,10 @@ export default function Dashboard({ params }) {
 
     return (
         <>
+            <Helmet>
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription} />
+            </Helmet>
             <Header title={`Hi ${userData.name?.split(" ")[0]}`} userData={userData} isLoading={isLoading} />
             <div style={{ marginTop: "18%", marginBottom: "18%" }} className="text-base">
                 {isLoading ?
