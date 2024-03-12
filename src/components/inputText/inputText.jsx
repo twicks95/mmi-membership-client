@@ -1,6 +1,10 @@
 import { ConfigProvider, Input } from "antd";
 
-export default function inputText({ placeholder }) {
+export default function inputText({
+  placeholder,
+  prefix = null,
+  suffix = null,
+}) {
   return (
     <ConfigProvider
       // input={}
@@ -10,7 +14,7 @@ export default function inputText({ placeholder }) {
         },
       }}
     >
-      <Input placeholder={placeholder} />
+      <Input placeholder={placeholder} prefix={prefix} suffix={suffix} />
     </ConfigProvider>
   );
 }
