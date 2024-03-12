@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Alert, Form, Input } from "antd"
-import Button from "../../components/button/button.jsx"
+import Button from "../../components/button/Button.jsx"
 import InputDate from "../../components/inputDate/inputDate.jsx"
 import { useEffect, useState } from "react"
 import Link from "next/link.js"
