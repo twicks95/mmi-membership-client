@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Alert, Form, Input } from "antd"
 import Button from "../../components/button/Button.jsx"
 import InputDate from "../../components/inputDate/inputDate.jsx"
+import InputRadio from "../../components/InputRadio/InputRadio.jsx"
 import { useEffect, useState } from "react"
 import Link from "next/link.js"
 import dayjs from "dayjs"
@@ -21,7 +22,8 @@ export default function Register() {
         birthDate: null, // 1990-12-30
         email: null,
         password: null,
-        confirmPassword: null
+        confirmPassword: null,
+        gender: null,
     })
 
     function isFormCompleted(formObject) {
@@ -78,6 +80,7 @@ export default function Register() {
                     .then(async (response) => {
                         if (response.ok) {
                             response.json().then((result) => {
+                                window.localStorage.setItem("userId", result.data.id)
                                 const redirectUrl = result.redirectURL
                                 if (redirectUrl) {
                                     window.location.href = redirectUrl;
@@ -151,6 +154,13 @@ export default function Register() {
                         <div style={{ borderRadius: "5px", boxShadow: "0 1px 4px 0 rgba(73, 73, 73, 0.15)" }}>
                             <Input style={{ height: "50px" }} placeholder="ID number" onChange={(e) => setFormData({ ...formData, idNumber: e.target.value })} />
                         </div>
+                    </div>
+                    <div className="mb-5">
+                        <div className="flex mb-2">
+                            <span className="font-medium">Gender</span>
+                            <div className="text-red-500 ml-1">*</div>
+                        </div>
+                        <InputRadio data={formData} setFormData={setFormData} />
                     </div>
 
                     <div className="mb-5">

@@ -35,6 +35,7 @@ export default function Settings({ params }) {
     const handleLogout = () => {
         console.log("remove storage")
         window.localStorage.removeItem("myVouchers")
+        window.localStorage.removeItem("userId")
     }
 
     return (
