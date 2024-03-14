@@ -4,15 +4,22 @@ import { useRef, useState } from "react"
 import Button from "../../../components/button/Button.jsx"
 import InputDate from "../../../components/inputDate/inputDate.jsx"
 import Image from "next/image.js"
-import { ConfigProvider, Form, Input, Upload, message } from "antd"
+import { ConfigProvider, Form, Input, InputNumber, Upload, message } from "antd"
 import Header from "@/components/header/header.jsx"
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // Import Quill styles
 
 export default function InputVoucher() {
     const { Dragger } = Upload
 
     const [confirmLoading, setConfirmLoading] = useState(false)
     const [voucherData, setVoucherData] = useState({
-
+        voucherQtyRequired: 1,
+        itemIdRequired: null,
+        voucherName: "",
+        pointsRequired: null,
+        birthDate: null,
+        tncDetail : null
     })
 
     const props = {
@@ -118,6 +125,48 @@ export default function InputVoucher() {
 
                             <div className="mb-5">
                                 <div className="flex mb-1">
+                                    <div className="text-base-extend font-medium">Voucher Quantity</div>
+                                    <div className="text-red-500 ml-1">*</div>
+                                </div>
+                                <div
+                                    style={{
+                                        borderRadius: "5px",
+                                        boxShadow: "0 1px 4px 0 rgba(73, 73, 73, 0.15)",
+                                    }}
+                                >
+                                    <InputNumber
+                                        className="text-base-extend font-medium h-[3.125rem] !bg-[#f6f6f6] !hover:bg-[#f6f6f6] w-full"
+                                        placeholder="voucher quantity required"
+                                        onChange={(value) =>
+                                            setVoucherData((prev) => ({ ...prev, voucherQtyRequired: value }))
+                                        }
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="mb-5">
+                                <div className="flex mb-1">
+                                    <div className="text-base-extend font-medium">Item Id</div>
+                                    <div className="text-red-500 ml-1">*</div>
+                                </div>
+                                <div
+                                    style={{
+                                        borderRadius: "5px",
+                                        boxShadow: "0 1px 4px 0 rgba(73, 73, 73, 0.15)",
+                                    }}
+                                >
+                                    <Input
+                                        className="text-base-extend font-medium h-[3.125rem] !bg-[#f6f6f6] !hover:bg-[#f6f6f6]"
+                                        placeholder="item id required"
+                                        onChange={(e) =>
+                                            setVoucherData((prev) => ({ ...prev, itemIdRequired: e.target.value }))
+                                        }
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="mb-5">
+                                <div className="flex mb-1">
                                     <div className="text-base-extend font-medium">Headline name</div>
                                     <div className="text-red-500 ml-1">*</div>
                                 </div>
@@ -201,10 +250,13 @@ export default function InputVoucher() {
                                         boxShadow: "0 1px 4px 0 rgba(73, 73, 73, 0.15)",
                                     }}
                                 >
-                                    <Input.TextArea
-                                        className="text-base-extend font-medium !min-h-[85px] !bg-[#f6f6f6] !hover:bg-[#f6f6f6] !py-3"
-                                        placeholder="type voucher details, terms and conditions to be displayed in pop-up details"
-                                        autoSize
+                                    <ReactQuill
+                                        className='h-[20rem]'
+                                        value={voucherData.tncDetail}
+                                        placeholder="Type voucher details, terms and conditions to be displayed in pop-up details"
+                                        onChange={(value) =>
+                                            setVoucherData((prev) => ({ ...prev, tncDetail: value }))
+                                        }
                                     />
                                 </div>
                             </div>
